@@ -1,109 +1,82 @@
-body {
-    font-family: Arial, sans-serif; /* Changed font to Arial for simplicity */
+/* Resetting default margin and padding */
+*{
     margin: 0;
     padding: 0;
-    background-color: #e7e7e7; /* Changed background color to match the website */
+    box-sizing: border-box;
 }
 
-header {
-    display: grid;
-    grid-template-columns: 150px auto;
-    padding: 10px; /* Added padding to create space around the header content */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    background-color: #333; /* Changed header background color */
-    color: #fff; /* Changed header text color to white */
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
-nav {
-    display: flex;
-    justify-content: space-around;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
-
-#logo_link {
-    padding-top: 5px;
-    justify-self: center;
-    align-self: center;
-    max-width: 100%; /* Set the maximum width of the image to 100% of its container */
+img { 
+    max-width: 20%;
     height: auto;
 }
 
-/* CSS for hero */
-#hero {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+
+/* Header styles */
+header {
+    background-color: #004080;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
 }
 
-#hero-box {
-    grid-column: 1/4;
-    grid-row: 1/3;
-    background-color: #fff; /* Changed hero box background color to white */
-    padding: 20px; /* Added padding to hero box */
-    border-radius: 10px; /* Added border radius to hero box */
+/* Navigation styles */
+nav {
+    background-color: #004080;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
 }
 
-#hero-msg {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    margin-top: 100px;
-    color: #333; /* Changed hero message text color to match background */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
 }
 
-.home-grid {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
+/* Main content styles */
+main {
+    background-color: #f2f2f2;
+    padding: 20px 0;
 }
 
-.card-img, .mountains {
-    width: 100%;
-    margin-bottom: 20px; /* Added margin to create space between images and surrounding elements */
+/* Section styles */
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 5px;
 }
 
-.Repair {
-    grid-column: 2/4;
-    grid-row: 2/3;
-    background-color: #fff; /* Changed card background color to white */
-    padding: 20px; /* Added padding to card */
-    border-radius: 10px; /* Added border radius to card */
+section h2 {
+    color: #004080;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.Build {
-    grid-column: 5/7;
-    grid-row: 2/3;
-    background-color: #fff; /* Changed card background color to white */
-    padding: 20px; /* Added padding to card */
-    border-radius: 10px; /* Added border radius to card */
+section p {
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-.rapids-card {
-    grid-column: 8/10;
-    grid-row: 2/3;
-    background-color: #fff; /* Changed card background color to white */
-    padding: 20px; /* Added padding to card */
-    border-radius: 10px; /* Added border radius to card */
-}
-
-#background {
-    grid-column: 1/11;
-    grid-row: 4/9;
-    background-color: #ccc; /* Changed background color of background section */
-    padding: 20px; /* Added padding to background section */
-    border-radius: 10px; /* Added border radius to background section */
-}
-
-
-.msg {
-    grid-column: 6/10;
-    grid-row: 6/7;
-    color: #333; /* Changed message text color to match background */
-}
-
+/* Footer styles */
 footer {
-    background-color: #333; /* Changed footer background color */
-    color: #fff; /* Changed footer text color to white */
-    padding: 25px 50px;
-    margin-top: 200px; 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    background-color: #004080;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
 }
