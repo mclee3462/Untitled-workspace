@@ -67,3 +67,60 @@ section p {
   font-size: 16px;
   line-height: 1.6;
 }
+.container {
+  display: grid;
+  grid-template-columns: [col1-start] 1fr [col2-start] 1fr [col3-start] 1fr [col3-end];
+  grid-template-rows: auto;
+  gap: 20px;
+}
+
+.header {
+  grid-column: col1-start / col3-end;
+}
+
+.main-content {
+  grid-column: col1-start / col3-end;
+}
+
+.sidebar {
+  grid-column: col3-start / col3-end;
+}
+
+.footer {
+  grid-column: col1-start / col3-end;
+}
+
+/* Navigation */
+.navigation {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjust as needed */
+  gap: 10px; /* Adjust gap between navigation items */
+}
+
+/* Fonts and Colors */
+body {
+  font-family: "Arial", sans-serif; /* Use appropriate font family */
+  color: #333; /* Adjust text color */
+}
+
+h1, h2, h3 {
+  font-family: "Helvetica", sans-serif; /* Use appropriate heading font */
+  color: #555; /* Adjust heading text color */
+}
+
+/* Spacing and Alignment */
+.container {
+  padding: 20px; /* Add padding to container */
+}
+
+.header, .footer {
+  text-align: center; /* Align text in header and footer */
+}
+
+.main-content {
+  margin-bottom: 20px; /* Add margin to bottom of main content */
+}
+
+.navigation {
+  justify-content: center; /* Center navigation items */
+}
