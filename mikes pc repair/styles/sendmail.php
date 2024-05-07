@@ -36,12 +36,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
     // Send email
-    mail($to, $subject, $email_message, $headers);
-    
-    // Response
-    echo 'Message sent successfully!';
+    if (mail($to, $subject, $email_message, $headers)) {
+        // Response
+        echo json_encode(array('status' => 'success', 'message' => 'Message sent successfully!'));
+    } else {
+        echo json_encode(array('status' => 'error', 'message' => 'Failed to send message. Please try again later.'));
+    }
 } else {
-    echo 'Invalid request!';
+    echo json_encode(array('status' => 'error', 'message' => 'Invalid request!'));
 }
 
 ?>

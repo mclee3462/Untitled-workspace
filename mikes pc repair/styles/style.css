@@ -9,7 +9,9 @@
 body {
     font-family: Helvetica, sans-serif;
     line-height: 1.6;
-}
+      margin: 1in;
+    }
+
 
 .container {
     max-width: 1200px;
